@@ -8,11 +8,27 @@ let title = document.querySelector(".subtitle")
 
 let count = 0;
 
-select1.addEventListener("click", function(){
+select1.addEventListener("click", function(event){
     count++;
-    title = "You've clicked the lights "+ count+" times"
+    title.textContent = "You've clicked the lights "+ count +" times"
+    let element1 = document.getElementById("lightbulb1");
+    element1.classList.toggle("active");
 
-    select1.classList.toggle(".item.lightbulb.active");
+}) 
+select2.addEventListener("click", function(event){
+    count++;
+    title.textContent = "You've clicked the lights "+ count +" times"
+    const element2 = document.getElementById("lightbulb2");
+
+    element2.classList.toggle("active");
+
+}) 
+select3.addEventListener("click", function(event){
+    count++;
+    title.textContent= "You've clicked the lights "+ count +" times"
+    const element3 = document.getElementById("lightbulb3");
+
+    element3.classList.toggle("active");
 
 }) 
 
